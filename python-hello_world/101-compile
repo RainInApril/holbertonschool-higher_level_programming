@@ -1,7 +1,4 @@
-#!/usr/bin/python3
-import py_compile
-import os
+#!/usr/bin/bash
 
-file_name = os.getenv('PYFILE')
-file_name_pyc = file_name + "c"
-py_compile.compile(file_name, file_name_pyc)
+python3 -m compileall -b $PYFILE
+chmod u+x $PYFILE'c'
