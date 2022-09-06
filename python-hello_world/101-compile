@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 python3 -m compileall -b $PYFILE
 chmod u+x $PYFILE'c'
