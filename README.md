@@ -1,1 +1,1 @@
-This repo was created for learning Python language at Holberton Australia
+This directory was created for project Python - if/else, loops, functions at Holberton Australia
