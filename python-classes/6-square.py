@@ -3,7 +3,7 @@
 
 
 class Square:
-    '''Blueprint of objects of class Square'''
+    '''Blueprint of objects of class Square.'''
     def __init__(self, size=0, position=(0, 0)):
         '''Initialises a square.'''
         self.__size = size
@@ -13,14 +13,14 @@ class Square:
         elif type(position[0]) != int or type(position[1]) != int:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif position[0] < 0 or position[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")       
+            raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = position
 
     @property
     def size(self):
         '''Retrieves size of square.'''
-        return self.__sizz
+        return self.__size
 
     @size.setter
     def size(self, value):
