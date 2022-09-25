@@ -27,7 +27,7 @@ Check for positive + negative int:
 
 Check for negative + negative int:
 	>>> add_integer(-10, -2)
-	12
+	-12
 
 Check for positive + positive float:
 	>>> add_integer(10.55, 2.55)
@@ -39,7 +39,7 @@ Check for positive + negative float:
 
 Check for negative + negative float:
 	>>> add_integer(-10.55, -2.55)
-	12
+	-12
 
 Check for a is a string:
 	>>> add_integer("Hello", 2)
