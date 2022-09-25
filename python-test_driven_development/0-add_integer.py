@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+'''
+The "0-add_integer" module, with function:
+
+add_integer(a, b)
+'''
 
 
 def add_integer(a, b=98):
@@ -12,4 +17,3 @@ def add_integer(a, b=98):
     if type(b) == float:
         b = int(b)
     return a + b
-
