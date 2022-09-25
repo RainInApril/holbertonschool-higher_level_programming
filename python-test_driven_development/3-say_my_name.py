@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+'''
+The "3-say_my_name" module, with function:
+
+say_my_name(first_name, last_name)
+'''
 
 
 def say_my_name(first_name, last_name=""):

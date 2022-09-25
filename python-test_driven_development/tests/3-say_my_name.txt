@@ -9,7 +9,7 @@ Importing ''say_my_name'' from ''3-say_my_name'' module:
 
 Check for single argument:
 	>>> say_my_name("Gem")
-	My name is Gem
+	My name is Gem 
 
 Check for normal full name:
 	>>> say_my_name("Gem", "Phan")
