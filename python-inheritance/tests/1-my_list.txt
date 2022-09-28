@@ -13,13 +13,13 @@ Check for module documentation:
 	True
 
 Check for class documentation:
-	>>> class = __import__("1-my_list").MyList.__doc__
-	>>> len(class) > 1
+	>>> func = __import__("1-my_list").MyList.__doc__
+	>>> len(func > 1
 	True
 
-Check for function documentation:
-        >>> func = __import__("1-my_list").MyList.print_sorted.__doc__
-        >>> len(func) > 1
+Check for method documentation:
+        >>> meth = __import__("1-my_list").MyList.print_sorted.__doc__
+        >>> len(meth) > 1
         True
 
 Checking for sublcass:
