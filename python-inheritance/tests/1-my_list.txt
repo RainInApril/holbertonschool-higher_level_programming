@@ -5,17 +5,22 @@ Using ''print_sorted'' function
 -------------------------------
 
 Import ''print_sorted'' from ''1-my_list'' module:
-	>>> print_sorted = __import__("1-my_list").__doc__
+	>>> print_sorted = __import__("1-my_list").MyList
 
 Check for module documentation:
 	>>> mod = __import__("1-my_list").__doc__
 	>>> len(mod) > 1
 	True
 
-Check for function documentation:
-	>>> func = __import__("1-my_list").print_sorted.__doc__
-	>>> len(func) > 1
+Check for class documentation:
+	>>> class = __import__("1-my_list").MyList.__doc__
+	>>> len(class) > 1
 	True
+
+Check for function documentation:
+        >>> func = __import__("1-my_list").MyList.print_sorted.__doc__
+        >>> len(func) > 1
+        True
 
 Checking for sublcass:
 	 >>> issubclass(MyList, list)
