@@ -8,12 +8,12 @@ Import ''print_sorted'' from ''1-my_list'' module:
 	>>> print_sorted = __import__("1-my_list").__doc__
 
 Check for module documentation:
-	>>> mod = __import__("1-my_list).__doc__
+	>>> mod = __import__("1-my_list").__doc__
 	>>> len(mod) > 1
 	True
 
 Check for function documentation:
-	>>> func = __import__("1-my_list).print_sorted.__doc__
+	>>> func = __import__("1-my_list").print_sorted.__doc__
 	>>> len(func) > 1
 	True
 
