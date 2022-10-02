@@ -1,0 +1,63 @@
+The ''7-base_geometry'' module
+==============================
+
+Using ''BaseGeometry'' function
+-------------------------------
+
+Importing ''BaseGeometry'' from ''7-base_geometry'' module:
+	>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+Check for module documentation:
+	  >>> mod = __import__("7-base_geometry").__doc__
+	  >>> len(mod) > 1
+	  True
+
+Check for class documentation:
+	  >>> cls = __import__("7-base_geometry").BaseGeometry.__doc__
+	  >>> len(cls) > 1
+	  True
+
+Check for method (area) documentation:
+	  >>> met_are = __import__("7-base_geometry").BaseGeometry.area.__doc__
+	  >>> len(met_area) > 1
+	  True
+
+Check for method (integer_validator) documentation:
+	  >>> met_int = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+	  >>> len(met_int) > 1
+	  True
+
+	  >>> base_geo = BaseGeometry()
+
+Check for no arguments for area:
+	  >>> base_geo.area()
+	  Traceback (most recent call last):
+	  ...
+	  Exception: area() is not implemented
+
+Check for no arguments for integer_validator:
+	  >>> base_geo.integer_validator()
+	  Traceback (most recent call last):
+	  ...
+	  TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Check for single argument for integer validator:
+	  >>> base_geo.integer_validator("age")
+	  Traceback (most recent call last):
+	  ...
+	  TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Check for correct function of integer_validator:
+	  >>> base_geo.integer_validator("age", 25)
+
+Check for negative value:
+	  >>> base_geo.integer_validator("age", -25)
+	  Traceback (most recent call last):
+	  ...
+	  ValueError: age must be greater than 0
+
+Check for multiple arguments:
+	  >>> base_geo.integer_validator("name", "Gem", 25)
+	  Traceback (most recent call last):
+	  ...
+	  TypeError: integer_validator() takes 3 positional arguments but 4 were given
