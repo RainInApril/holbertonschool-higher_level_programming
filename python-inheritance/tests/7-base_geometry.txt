@@ -18,7 +18,7 @@ Check for class documentation:
 	  True
 
 Check for method (area) documentation:
-	  >>> met_are = __import__("7-base_geometry").BaseGeometry.area.__doc__
+	  >>> met_area = __import__("7-base_geometry").BaseGeometry.area.__doc__
 	  >>> len(met_area) > 1
 	  True
 
