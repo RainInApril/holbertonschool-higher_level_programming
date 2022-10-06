@@ -77,8 +77,17 @@ class Rectangle(Base):
 
     def display(self):
         """Prints a Rectangle using the character #."""
+        rect_str = ""
+        for space in range(self.y):
+            rect_str += '\n'
         for i in range(self.height):
-            print("#" * self.width)
+            for space in range(self.x):
+                rect_str += " "
+            for character in range(self.width):
+                rect_str += "#"
+            if i != self.height - 1:
+                rect_str += '\n'
+        print(rect_str)
 
     def __str__(self):
         """Returns a string."""
