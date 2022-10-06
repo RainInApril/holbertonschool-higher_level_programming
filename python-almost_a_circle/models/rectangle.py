@@ -33,7 +33,7 @@ class Rectangle(Base):
     def height(self):
         """Returns a Rectangle's height."""
         return self.__height
-i
+
     @height.setter
     def height(self, value):
         """Changes the value of a Retangle's height."""
