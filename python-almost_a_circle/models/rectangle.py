@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-'''The Rectangle class.'''
+"""The Rectangle class."""
 
 
 from models.base import Base
 
 
 class Rectangle(Base):
-    '''Constructs a Rectangle.'''
+    """Constructs a Rectangle."""
     def __init__(self, width, height, x=0, y=0, id=None):
-        '''Initialises a Rectangle.'''
+        """Initialises a Rectangle."""
         self.width = width
         self.height = height
         self.x = x
@@ -70,3 +70,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """Returns a Rectangle's area."""
+        return self.width * self.height
