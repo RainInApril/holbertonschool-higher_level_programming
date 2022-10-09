@@ -2,6 +2,10 @@
 '''The Base class.'''
 
 
+import json
+from os.path import exists
+
+
 class Base:
     '''Constructs a Base class.'''
     __nb_objects = 0
@@ -13,3 +17,10 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Returns the JSON string representation of list_dictionaries."""
+        if list_dictionaries is None or list_dictionaries == '':
+            list_dictionaries = []
+        return json.dumps(list_dictionaries)
