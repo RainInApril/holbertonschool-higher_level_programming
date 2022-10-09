@@ -93,3 +93,13 @@ class Rectangle(Base):
         """Returns a string."""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} \
 - {self.width}/{self.height}"
+
+    def update(self, *args, **kwargs):
+        """Assigns an argument to each attribute."""
+        if args is not None and len(args) > 0:
+            attributes = ("id", "width", "height", "x", "y")
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
+        if kwargs is not None:
+            for key, value in kwargs.items():
+                setattr(self, str(key), value)
