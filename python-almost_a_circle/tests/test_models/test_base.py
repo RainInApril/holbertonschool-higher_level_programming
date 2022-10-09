@@ -28,7 +28,7 @@ class TestBase(unittest.TestCase):
         Base._Base__nb_objects = 0
         cls.base1 = Base()
         cls.base2 = Base()
-        cls.base3 = Base(id = 25)
+        cls.base3 = Base(id=25)
 
     def test_obj_id(self):
         """Tests Base's id."""
